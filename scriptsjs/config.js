@@ -1,0 +1,1 @@
+export const API_URL = "https://ton-back.onrender.com";
