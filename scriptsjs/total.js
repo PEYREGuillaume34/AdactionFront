@@ -17,7 +17,7 @@ const displayToday = async () => {
 
     try {
         // récupère toutes les collectes
-        const response = await fetch(`fetch(${API_URL}/collects`);
+        const response = await fetch(`${API_URL}/collects`);
         const data = await response.json();
         // voir a quoi ca ressemble pour appels ult.
         console.log("collecte:", data);
@@ -121,7 +121,7 @@ async function countUserPoints() {
 
     // ca part
     try {
-        const res = await fetch(`fetch(${API_URL}/points/${userId}`, {
+        const res = await fetch(`${API_URL}/points/${userId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

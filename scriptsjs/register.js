@@ -75,7 +75,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try {
-        const response = await fetch(`fetch(${API_URL}/volunteer`, {
+        const response = await fetch(`${API_URL}/volunteer`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

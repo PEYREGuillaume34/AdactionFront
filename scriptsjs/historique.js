@@ -67,7 +67,7 @@ const printCard = async (index, data) => {
 
         // action de delete via route delete
         try {
-            const res = await fetch(`fetch(${API_URL}/collects/${collectId}`, {
+            const res = await fetch(`${API_URL}/collects/${collectId}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ volunteer_id: userId })

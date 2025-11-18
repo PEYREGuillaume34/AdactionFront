@@ -57,7 +57,7 @@ const sendUpdates = async (event) => {
     console.log(pseudo, location, email, associationId, nomasso, points);
 
     // on envoie dans la DB
-    const response = await fetch(`fetch(${API_URL}/volunteer/${userId}`, {
+    const response = await fetch(`${API_URL}/volunteer/${userId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

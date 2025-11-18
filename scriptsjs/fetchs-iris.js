@@ -20,13 +20,13 @@ function nouvelleBalise2(type, id) {
 const getUserInfos = async () => {
     const userId = localStorage.getItem("id");
     if (!userId) return null;
-    const response = await fetch(`fetch(${API_URL}/volunteer/profile/${userId}`);
+    const response = await fetch(`(${API_URL}/volunteer/profile/${userId}`);
     return await response.json();
 };
 
 // function fetch sur table associations GET
 const getAssolist = async () => {
-    const response = await fetch(`fetch(${API_URL}/associations`);
+    const response = await fetch(`(${API_URL}/associations`);
     const data = await response.json();
     return (data);
 }
@@ -47,7 +47,7 @@ function assoDropMenu(array, input) {
 const fetchUserPoints = async (id) => {
     try {
 
-        const response = await fetch(`fetch(${API_URL}/volunteer/${id}`);
+        const response = await fetch(`${API_URL}/volunteer/${id}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -66,7 +66,7 @@ const fetchUserPoints = async (id) => {
 // fonction import infos pour historique
 
 const getHistoInfo = async (id) => {
-    const response = await fetch(`fetch(${API_URL}/collects/volunteer/${id}`);
+    const response = await fetch(`${API_URL}/collects/volunteer/${id}`);
     const data = await response.json()
     return data;
 }

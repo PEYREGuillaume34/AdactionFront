@@ -48,7 +48,7 @@ const getVolunteer = async () => {
     // recuperation des données de chaque volontaire depuis la base de données
     showLoading();
     try {
-        const response = await fetch(`fetch(${API_URL}/volunteers`);
+        const response = await fetch(`${API_URL}/volunteers`);
         const data = await response.json();
         console.log(data);
         data.forEach(volunteer => {
@@ -69,7 +69,7 @@ const getVolunteer = async () => {
             let btnRemove = row.querySelector('.remove-btn');
             btnRemove.addEventListener('click', async () => {
                 try {
-                    const deleteResponse = await fetch(`fetch(${API_URL}/volunteer/${idVolunteer}`, {
+                    const deleteResponse = await fetch(`${API_URL}/volunteer/${idVolunteer}`, {
                         method: 'DELETE'
                     });
                     if (deleteResponse.ok) {
@@ -105,7 +105,7 @@ console.log("associationName:", associationName);
 const getVolunteersByAssociation = async (associationName) => {
     showLoading();
     try {
-        const response = await fetch(`fetch(${API_URL}/volunteers/${associationName}`);
+        const response = await fetch(`${API_URL}/volunteers/${associationName}`);
         const data = await response.json();
         console.log("data:", data);
         userLine.innerHTML = ''; // faire disparaitre les autres volontaires
@@ -133,7 +133,7 @@ getVolunteersByAssociation(associationName);
 const populateLocationFilter = async () => {
     showLoading();
     try {
-        const response = await fetch(`fetch(${API_URL}/volunteers`);
+        const response = await fetch(`${API_URL}/volunteers`);
         const data = await response.json();
         const locations = data.map(volunteer => volunteer.location);
         const uniqueLocations = [];

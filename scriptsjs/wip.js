@@ -66,7 +66,7 @@ async function sendToDatabase() {
 
 
   try {
-    const response = await fetch(`fetch(${API_URL}/postCollects`, {
+    const response = await fetch(`${API_URL}/postCollects`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ async function updateDatabase() {
 
 
   try {
-    const response = await fetch(`fetch(${API_URL}/collects/${collectIdLS}`, {
+    const response = await fetch(`${API_URL}/collects/${collectIdLS}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
