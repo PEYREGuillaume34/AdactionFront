@@ -26,7 +26,7 @@ const getUserInfos = async () => {
 
 // function fetch sur table associations GET
 const getAssolist = async () => {
-    const response = await fetch(`(${API_URL}/associations`);
+    const response = await fetch(`${API_URL}/associations`);
     const data = await response.json();
     return (data);
 }
